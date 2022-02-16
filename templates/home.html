@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+
+
+{% block content %}
+  <table border='1' style="width:100%; text-align:center">
+    <thead>
+      <th> Name </th>
+      <th> Pric </th>
+      <th> Quantity </th>
+    </thead>
+
+    <tbody>
+      {% for product in products %}
+        <tr>
+          <td>{{product.name}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.quantity}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
