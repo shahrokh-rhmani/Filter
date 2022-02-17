@@ -5,6 +5,12 @@
 
 
 {% block content %}
+
+  <form  method="get">
+    {{product_filter.form.as_p}}
+    <input type="submit" name="" value="Submit">
+  </form>
+
   <table>
     <thead>
       <th> Name </th>
@@ -13,7 +19,7 @@
     </thead>
 
     <tbody>
-      {% for product in products %}
+      {% for product in product_filter.qs %}
         <tr>
           <td>{{product.name}}</td>
           <td>{{product.price}}</td>
