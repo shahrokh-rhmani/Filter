@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # third party
-    'django_filter',
+    'django_filters',
 
 
     # local
